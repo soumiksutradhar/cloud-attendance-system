@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
@@ -11,7 +11,7 @@ secret_key = os.urandom(24)
 
 def create_app():
 	app = Flask(__name__)
-	app.config['SECRET KEY'] = secret_key
+	app.config['SECRET_KEY'] = secret_key
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../instance/app.db'
 	app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -25,5 +25,13 @@ def create_app():
 	from .routes.main import main as main_blueprint
 	app.register_blueprint(auth_blueprint)
 	app.register_blueprint(main_blueprint)
+
+	@app.errorhandler(403)
+	def forbidden_error(error):
+		return render_template('403.html'), 403
+
+	with app.app_context():		# Importing models and creating tables
+		from .models import user, attendance
+		db.create_all()
 
 	return app
