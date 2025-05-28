@@ -1,0 +1,233 @@
+/* General body background and text */
+body {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form container */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1e1e1e; /* Darker form background */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  color: #e0e0e0;
+}
+
+/* Form inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 0.5rem 0 1rem 0;
+  border: 1.5px solid #444;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #3a86ff; /* Bright accent */
+  outline: none;
+  background-color: #3a3a3a;
+}
+
+/* Checkbox */
+form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Submit button */
+form button[type="submit"],
+form input[type="submit"] {
+  background-color: #3a86ff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover,
+form input[type="submit"]:hover {
+  background-color: #265ecf;
+}
+
+/* Homepage container - center everything */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Site header */
+.site-header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.site-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: #3a86ff;
+}
+
+.site-header p {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 0;
+  color: #bbbbbb;
+}
+
+/* Style for site name and tagline on homepage */
+.home-header {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #3a86ff;
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* Button styles for links */
+.home-container a.btn {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #3a86ff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a.btn {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #3b82f6; /* Blue for dark mode */
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: #2563eb;
+}
+
+
+/* Flash messages styling */
+.flash-container {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.alert {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.alert-info {
+  background-color: #2c2c2c;
+  color: #a0a0a0;
+  border: 1px solid #444;
+}
+
+.alert-success {
+  background-color: #1b441b;
+  color: #a3e635;
+  border: 1px solid #6b9a1f;
+}
+
+.alert-warning {
+  background-color: #4b3b00;
+  color: #facc15;
+  border: 1px solid #b77900;
+}
+
+.alert-danger {
+  background-color: #5b1a1a;
+  color: #f87171;
+  border: 1px solid #9b2c2c;
+}
+
+/* Navigation bar styling */
+header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  color: #e0e0e0;
+}
+
+nav a {
+  color: #3a86ff;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Paragraph color inside nav when logged in */
+nav p {
+  display: inline;
+  color: #bbb;
+  margin: 0 1rem 0 0;
+}
+
+/* Hr styling */
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 1rem 0;
+}
+
+.btn-group {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-group .btn {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+}

@@ -3,5 +3,23 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h2>Welcome to the Attendance System</h2>
+<div class="home-header">
+  <h1>CheckPoint</h1>
+  <p><em>Your cloud-based attendance hub</em></p>
+</div>
+{% if current_user.is_authenticated %}
+    {% if current_user.role in ['teacher', 'admin'] %}
+        <div>
+            <a href="{{ url_for('auth.teacher_dashboard') }}" class="btn">Teacher Dashboard</a>
+            <a href="{{ url_for('auth.set_attendance_window') }}" class="btn">Set Attendance Window</a>
+        </div>
+    {% else %}
+        <p>You are logged in as a student.</p>
+    {% endif %}
+{% else %}
+    <div class="btn-group">
+        <a href="{{ url_for('auth.login') }}" class="btn">Login</a>
+        <a href="{{ url_for('auth.register') }}" class="btn">Register</a>
+    </div>
+{% endif %}
 {% endblock %}
