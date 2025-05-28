@@ -55,7 +55,8 @@ http://localhost:5000
 ---
 
 ## Project structure
-<pre><code>app/
+<pre><code>
+app/
 ├── __init__.py
 ├── decorators.py
 ├── forms/
@@ -71,7 +72,8 @@ http://localhost:5000
 │   ├── auth.py
 │   └── main.py
 ├── static/
-│   └── styles.css
+│   └── css/
+│       └── styles.css
 └── templates/
     ├── 403.html
     ├── home.html
@@ -79,7 +81,8 @@ http://localhost:5000
     ├── login.html
     ├── register.html
     ├── set_attendance_window.html
-    └── teacher_dashboard.html</code></pre>
+    └── teacher_dashboard.html
+</code></pre>
 
 ---
 
