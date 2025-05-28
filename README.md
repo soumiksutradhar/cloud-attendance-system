@@ -80,3 +80,8 @@ http://localhost:5000
     ├── register.html
     ├── set_attendance_window.html
     └── teacher_dashboard.html</code></pre>
+
+---
+
+## Future updates
+-UI improvements
