@@ -84,4 +84,5 @@ http://localhost:5000
 ---
 
 ## Future updates
--UI improvements
+- UI improvements
+- QR scanning for extra verification
