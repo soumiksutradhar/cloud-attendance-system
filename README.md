@@ -87,5 +87,6 @@ app/
 ---
 
 ## Future updates
-- UI improvements
 - QR scanning for extra verification
+- UI improvements
+- QOL improvements
